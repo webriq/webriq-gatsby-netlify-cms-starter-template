@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: webriq/netlify-cms-blog-starter-template
+media_folder: static/assets
+public_folder: assets
+collections:
+  - name: blog
+    label: Blog
+    folder: src/markdown/blog
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: publishedDate, label: Published Date, widget: date }
+      - { name: excerpt, label: Excerpt, widget: text }
+      - { name: body, label: Body, widget: markdown }
+      - { name: metaTitle, label: Meta Title }
+      - { name: metaKeywords, label: Meta Keywords }
+      - { name: metaDescription, label: Meta Description, widget: text }
+      - { name: banner, label: Banner, widget: image }
+      - { name: status, label: Status }
+      - { name: description, label: Description, widget: text }
+      - { name: author, label: Author }
+      - { name: categories, label: Categories }
+      - { name: tags, label: tags }
