@@ -21,3 +21,13 @@ This is a markdown widget in which we can specify H1, H2 and Paragraph. Take a l
 this is a group of text that is called a paragraph. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
 
 Next paragraph. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+<div class="sidenote"><small class="sidenote__toggle">## H2 Custom Box
+
+This is a customBox. This group of text should be inside a div with a class custombox. This is a customBox. This group of text should be inside a div with a class custombox.
+
+This is a customBox. This group of text should be inside a div with a class custombox. This is a customBox. This group of text should be inside a div with a class custombox.</small></div>
+
+
+
+Next paragraph. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
