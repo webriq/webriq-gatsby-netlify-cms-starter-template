@@ -615,6 +615,23 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+/* BLOG AREA */
+
+.img-area {
+  background-image: url(/assets/communities-section-bg-1c660e8….jpg);
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.blog-list {
+  margin-bottom: 50px;
+}
+.blog-list h4 a {
+  color: #000;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
