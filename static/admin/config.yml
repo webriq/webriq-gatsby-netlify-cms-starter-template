@@ -19,6 +19,26 @@ collections:
       - { name: banner, label: Banner, widget: image }
       - { name: status, label: Status }
       - { name: description, label: Description, widget: text }
-      - { name: author, label: Author }
+      - {
+          label: Author,
+          name: author,
+          widget: relation,
+          collection: authors,
+          searchFields: [fullName, firstName, lastName],
+          valueField: fullName,
+        }
       - { name: categories, label: Categories }
       - { name: tags, label: tags }
+  - name: authors
+    label: Authors
+    folder: src/markdown/authors
+    create: true
+    slug: { { slug } }
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: author }
+      - { label: Full Name, name: fullName, widget: string }
+      - { label: First Name, name: firstName, widget: string }
+      - { label: Last Name, name: lastName, widget: string }
+      - { label: Position, name: position, widget: string }
+      - { label: Profile Picture, name: profilePicture, widget: image }
+      - { label: Email, name: email, widget: string }
