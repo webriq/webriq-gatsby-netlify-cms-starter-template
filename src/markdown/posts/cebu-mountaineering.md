@@ -7,7 +7,7 @@ excerpt: >-
 metaTitle: Meta Title
 metaKeywords: Meta Keywords
 metaDescription: Meta Description
-banner: /assets/58375311_650283302078367_8100906634970136576_n.jpg
+banner: /assets/67545447_467977037322739_6235694920632369152_n.jpg
 status: Published
 description: >-
   Folder collections represent one or more files with the same format, fields,
