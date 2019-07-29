@@ -1,6 +1,6 @@
 ---
 layout: author
-fullName: Pasilang
+fullName: Ariel Pasilang
 firstName: Ariel
 lastName: Pasilang
 position: Web Developer
