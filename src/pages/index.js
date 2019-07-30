@@ -192,18 +192,7 @@ class ContactPage extends React.Component {
           <p>This template is a gatsby + netlifyCMS ready</p>
           <ol>
             <li>
-              To add new blog entry: Access <Link to="/admin/#/">Admin</Link>
-              <ul>
-                <li>
-                  <Link to="/admin/#/collections/authors">Add New Authors</Link>
-                </li>
-                <li>
-                  <Link to="/admin/#/">Add New Tags</Link>
-                </li>
-                <li>
-                  <Link to="/admin/#/collections/blog">Add New Blogs</Link>
-                </li>
-              </ul>
+              To add new blog entry: Access : http://localhost:8000/admin/#/
             </li>
             <li>
               <Link to="/blog">Blog List</Link>
