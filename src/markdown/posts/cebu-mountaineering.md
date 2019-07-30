@@ -15,7 +15,7 @@ description: >-
   repository. You might use a folder collection for blog posts, product pages,
   author data files, etc.
 author: Ariel Pasilang
-categories: Mountaineering
+category: Category1
 tags: Website
 ---
 ## We Go Backpacking and Camping
