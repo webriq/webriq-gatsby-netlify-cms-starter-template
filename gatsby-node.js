@@ -1,73 +1,75 @@
-// const path = require("path")
-// const slugify = require("slugify")
+const path = require("path")
+const slugify = require("slugify")
 
-// const makeRequest = (graphql, request) =>
-//   new Promise((resolve, reject) => {
-//     // Query for nodes to use in creating pages.
-//     resolve(
-//       graphql(request).then(result => {
-//         if (result.errors) {
-//           reject(result.errors)
-//         }
+const makeRequest = (graphql, request) =>
+  new Promise((resolve, reject) => {
+    // Query for nodes to use in creating pages.
+    resolve(
+      graphql(request).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
 
-//         return result
-//       })
-//     )
-//   })
+        return result
+      })
+    )
+  })
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-//   const getPosts = makeRequest(
-//     graphql,
-//     `
-//       query {
-//         allMarkdownRemark {
-//           edges {
-//             node {
-//               id
-//               frontmatter {
-//                 title
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `
-//   ).then(result => {
-//     // console.log(result.data.allStrapiPosts.edges)
-//     // Create individual pages
-//     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//       createPage({
-//         path: `/${slugify(node.frontmatter.title).toLowerCase()}`,
-//         component: path.resolve(`./src/templates/blog-template.js`),
-//         context: {
-//           id: node.id,
-//         },
-//       })
-//     })
+  const getPosts = makeRequest(
+    graphql,
+    `query {
+      allMarkdownRemark(filter: { fileAbsolutePath: {regex : "\/posts/"} })
+        {
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                author
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    // console.log(result.data.allStrapiPosts.edges)
+    // Create individual pages
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${slugify(node.frontmatter.title).toLowerCase()}`,
+        component: path.resolve(`./src/templates/blog-template.js`),
+        context: {
+          id: node.id,
+          author: node.frontmatter.author,
+        },
+      })
+    })
 
-//     // Create paginated posts
-//     const posts = result.data.allMarkdownRemark.edges.map(post => post.node)
-//     const postsPerPage = 10
-//     const numPages = Math.ceil(posts.length / postsPerPage)
+    // Create paginated posts
+    const posts = result.data.allMarkdownRemark.edges.map(post => post.node)
+    const postsPerPage = 10
+    const numPages = Math.ceil(posts.length / postsPerPage)
 
-//     Array.from({ length: numPages }).forEach((_, i) => {
-//       createPage({
-//         path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
-//         component: path.resolve(`./src/templates/blog-list.js`),
-//         context: {
-//           limit: postsPerPage,
-//           skip: i * postsPerPage,
-//           numPages,
-//           currentPage: i + 1,
-//         },
-//       })
-//     })
-//   })
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
+        component: path.resolve(`./src/templates/blog-list.js`),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
+  })
 
-//   return Promise.all([getPosts])
-// }
+  return Promise.all([getPosts])
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions

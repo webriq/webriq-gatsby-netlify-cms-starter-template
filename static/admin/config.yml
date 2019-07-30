@@ -27,7 +27,14 @@ collections:
           searchFields: [fullName, firstName, lastName],
           valueField: fullName,
         }
-      - { name: categories, label: Categories }
+      - {
+          label: Category,
+          name: category,
+          widget: relation,
+          collection: categories,
+          searchFields: [category],
+          valueField: category,
+        }
       - { name: tags, label: tags }
   - name: authors
     label: Authors
@@ -42,3 +49,10 @@ collections:
       - { label: Position, name: position, widget: string }
       - { label: Profile Picture, name: profilePicture, widget: image }
       - { label: Email, name: email, widget: string }
+  - name: categories
+    label: Categories
+    folder: src/markdown/categories
+    identifier_field: category
+    create: true
+    fields:
+      - { label: Category, name: category }
