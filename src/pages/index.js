@@ -209,10 +209,10 @@ class ContactPage extends React.Component {
           <ol>
             <li>To add new blog entry: Access : http://address/admin/#/</li>
             <li>
-              <Link to="/blog">Blog List</Link>
+              <Link to="/blog">Sample Blog List</Link>
             </li>
             <li>
-              <Link to="/blog-01">Blog Template</Link>
+              <Link to="/blog-01">Sample Blog Template</Link>
             </li>
           </ol>
         </div>
