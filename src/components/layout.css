@@ -94,7 +94,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: Montserrat, monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -230,7 +230,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Odachi, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -246,7 +246,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Odachi, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -353,6 +353,7 @@ ol {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
+  font-family: Montserrat Medium, sans-serif;
 }
 dl {
   margin-left: 0;
@@ -599,6 +600,7 @@ code {
 pre code {
   background: none;
   line-height: 1.42;
+  font-family: Montserrat;
 }
 code:before,
 code:after,
@@ -661,14 +663,9 @@ pre tt:after {
   padding: 117px;
 }
 /* CUSTOM CSS */
-.index-container {
-  background-image: url("../images/samu.png");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+
 footer span {
-  font-family: Odachi, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 @media only screen and (max-width: 480px) {
   html {

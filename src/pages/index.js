@@ -11,7 +11,7 @@ import { Container } from "reactstrap"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="index-container">
+    <div>
       <h1 style={{ textAlign: "center", padding: "20px" }}>
         Gatsby + NetlifyCMS
       </h1>
@@ -191,9 +191,7 @@ class ContactPage extends React.Component {
           <h2>4. Blog Area</h2>
           <p>This template is a gatsby + netlifyCMS ready</p>
           <ol>
-            <li>
-              To add new blog entry: Access : http://localhost:8000/admin/#/
-            </li>
+            <li>To add new blog entry: Access : http://address/admin/#/</li>
             <li>
               <Link to="/blog">Blog List</Link>
             </li>
