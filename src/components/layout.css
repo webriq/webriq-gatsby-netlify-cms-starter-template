@@ -665,7 +665,7 @@ pre tt:after {
 /* CUSTOM CSS */
 
 footer span {
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Medium, sans-serif;
 }
 @media only screen and (max-width: 480px) {
   html {

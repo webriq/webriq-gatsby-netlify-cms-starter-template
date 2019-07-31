@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <footer style={{ textAlign: "center" }}>
-        <span style={{ letterSpacing: "1px" }}>Little Toshi Template</span> ©{" "}
+        <span>Webriq -> Gatsby + netlifyCMS Template</span> ©{" "}
         {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
