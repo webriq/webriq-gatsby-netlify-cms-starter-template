@@ -32,11 +32,24 @@ const IndexPage = () => (
               <pre>
                 <code>{`
 @font-face {
-  font-family: "Odachi";
-  src: url("../fonts/Odachi.otf") format("opentype");
+  font-family: "Montserrat Medium";
+  src: url("../fonts/Montserrat-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 `}</code>
               </pre>
@@ -53,12 +66,15 @@ const IndexPage = () => (
               <pre>
                 <code>{`
 html {
-  font-family: Odachi, sans-serif;
+  font-family: Montserrat, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+h1 {
+  font-family: Helvetica, sans-serif;
+}
 h2 {
-  font-family: Odachi, sans-serif;
+  font-family: Montserrat Medium, sans-serif;
 }`}</code>
               </pre>
             </li>
