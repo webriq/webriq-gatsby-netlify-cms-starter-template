@@ -16,8 +16,12 @@ description: >-
   repository. You might use a folder collection for blog posts, product pages,
   author data files, etc.
 author: Ariel Pasilang
-categories: Website
-tags: Website
+category:
+  - Category1
+  - Category2
+tag:
+  - Tag1
+  - Tag2
 ---
 ## Heading 2 Netlify-CMS
 

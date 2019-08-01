@@ -15,8 +15,10 @@ description: >-
   repository. You might use a folder collection for blog posts, product pages,
   author data files, etc.
 author: Ariel Pasilang
-category: Category1
-tags: Website
+category:
+  - Category1
+tag:
+  - Tag2
 ---
 
 ## Fresh Air
