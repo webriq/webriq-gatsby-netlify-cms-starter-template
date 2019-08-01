@@ -34,8 +34,17 @@ collections:
           collection: categories,
           searchFields: [category],
           valueField: category,
+          multiple: true,
         }
-      - { name: tags, label: tags }
+      - {
+          label: Tag,
+          name: tag,
+          widget: relation,
+          collection: tags,
+          searchFields: [tag],
+          valueField: tag,
+          multiple: true,
+        }
   - name: authors
     label: Authors
     folder: src/markdown/authors
@@ -56,3 +65,10 @@ collections:
     create: true
     fields:
       - { label: Category, name: category }
+  - name: tags
+    label: Tags
+    folder: src/markdown/tags
+    identifier_field: tag
+    create: true
+    fields:
+      - { label: Tag, name: tag }
