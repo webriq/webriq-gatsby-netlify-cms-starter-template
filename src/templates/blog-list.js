@@ -66,8 +66,8 @@ export const blogQuery = graphql`
 						status
 						description
 						author
-						categories
-						tags
+						category
+						tag
 					}
 					html
 				}
