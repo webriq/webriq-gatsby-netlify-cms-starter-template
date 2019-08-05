@@ -1,10 +1,10 @@
 ---
 layout: author
-fullName: Ariel Pasilang
-firstName: Ariel
-lastName: Pasilang
+fullName: First Author
+firstName: First
+lastName: Author
 position: Web Developer
-profilePicture: /assets/20190626_161145.jpg
+profilePicture: /assets/67545447_467977037322739_6235694920632369152_n.jpg
 email: arielpasilang@gmail.com
 ---
 
