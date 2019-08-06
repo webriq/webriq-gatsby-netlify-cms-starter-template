@@ -8,7 +8,7 @@ metaDescription: Meta Description
 banner: /assets/67545447_467977037322739_6235694920632369152_n.jpg
 status: Draft
 description: Description of this earth blog.
-author: Ariel Pasilang
+author: John Doe
 category:
   - Category1
   - Category2
