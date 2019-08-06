@@ -15,7 +15,7 @@ description: >-
   and configuration options, all stored within the same folder in the
   repository. You might use a folder collection for blog posts, product pages,
   author data files, etc.
-author: Ariel Pasilang
+author: John Doe
 category:
   - Category1
   - Category2
