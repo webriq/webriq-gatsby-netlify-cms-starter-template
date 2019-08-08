@@ -1,4 +1,5 @@
 import CMS from "netlify-cms-app"
+CMS.registerPreviewStyle("/css/index.css")
 
 CMS.registerEditorComponent({
 	id: "custombox",
