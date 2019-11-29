@@ -2,15 +2,19 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import MySwiper from "../components/swiper/swiper"
+// import MySwiper from "../components/swiper/swiper"
 import SampleForm from "../components/form/form"
-import { LazyLoadImage } from "react-lazy-load-image-component"
+// import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import income from "../images/incomes.png"
 import team from "../images/men-group-outline.png"
 import services from "../images/customer-support.png"
 import support from "../images/support.png"
-
+import dark from "../images/dark-flower.jpeg"
+import fb from "../images/facebook.png"
+import twitter from "../images/twitter.png"
+import linkedin from "../images/linkedin.png"
+import insta from "../images/instagram.png"
 class IndexPage extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -28,47 +32,15 @@ class IndexPage extends React.Component {
                 Let's Talk
               </Link>
             </div>
-            <MySwiper slidesperview={1}>
-              <div
-                style={{
-                  background: "url(https://source.unsplash.com/1366x480/?dark)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  height: "480px",
-                  width: "100%",
-                }}
-              />
-              <div
-                style={{
-                  background:
-                    "url(https://source.unsplash.com/1366x480/?darkshadow)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  height: "480px",
-                  width: "100%",
-                }}
-              />
-              <div
-                style={{
-                  background:
-                    "url(https://source.unsplash.com/1366x480/?darkroom)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  height: "480px",
-                  width: "100%",
-                }}
-              />
-              <div
-                style={{
-                  background:
-                    "url(https://source.unsplash.com/1366x480/?darknight)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  height: "480px",
-                  width: "100%",
-                }}
-              />
-            </MySwiper>
+            <div
+              style={{
+                background: `url(${dark})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                height: "480px",
+                width: "100%",
+              }}
+            />
             <div id="services" className="text-center container">
               <div className="container p-relative">
                 <div className="blog-wrap py-4">
@@ -80,7 +52,7 @@ class IndexPage extends React.Component {
                             src={services}
                             alt="Services"
                             className="img-fluid p-relative"
-                            style={{ maxWidth: "130px" }}
+                            style={{ maxWidth: "100px" }}
                           />
                         </div>
                         <h3 className="text-uppercase text-dark mb-0">
@@ -95,7 +67,7 @@ class IndexPage extends React.Component {
                             src={income}
                             alt="Income"
                             className="img-fluid p-relative"
-                            style={{ maxWidth: "130px" }}
+                            style={{ maxWidth: "100px" }}
                           />
                         </div>
                         <h3 className="text-uppercase text-dark mb-0">
@@ -110,7 +82,7 @@ class IndexPage extends React.Component {
                             src={team}
                             alt="Our Team"
                             className="img-fluid p-relative"
-                            style={{ maxWidth: "130px" }}
+                            style={{ maxWidth: "100px" }}
                           />
                         </div>
                         <h3 className="text-uppercase text-dark mb-0">
@@ -252,16 +224,17 @@ class IndexPage extends React.Component {
             </div>
           </section>
 
-          <div id="formsection" className="py-4">
+          <div id="formsection" className="py-5 text-center">
             <div className="container">
+              <h2 className="mb-4 pb-3">Contact Us</h2>
               <div className="row">
-                <div className="col-md-6 mx-auto">
+                <div className="col-md-6 ">
                   <SampleForm
                     form_name="Newsletter Form"
                     form_id="5bcd42f86b63453b251972bc"
                     form_classname="form-newsletter mt-3"
                   >
-                    <h2 className="mb-0">Get in Touch</h2>
+                    <h3 className="mb-0">Get in Touch</h3>
                     <div className="form-row">
                       <div className="col-12 mb-3">
                         <div className="form-group">
@@ -306,6 +279,70 @@ class IndexPage extends React.Component {
                       </div>
                     </div>
                   </SampleForm>
+                </div>
+                <div className="col-md-6">
+                  <ul className="list-unstyled pb-3 mt-3">
+                    <li className="d-inline mx-2">
+                      <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={fb}
+                          className="img-fluid"
+                          alt="social icons"
+                        />
+                      </a>
+                    </li>
+                    <li className="d-inline mx-2">
+                      <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={insta}
+                          className="img-fluid"
+                          alt="social icons"
+                        />
+                      </a>
+                    </li>
+                    <li className="d-inline mx-2">
+                      <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={linkedin}
+                          className="img-fluid"
+                          alt="social icons"
+                        />
+                      </a>
+                    </li>
+                    <li className="d-inline mx-2">
+                      <a
+                        href="https://twitter.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={twitter}
+                          className="img-fluid"
+                          alt="social icons"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                  <iframe
+                    title="Google Map"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    style={{ border: "0" }}
+                  />
                 </div>
               </div>
             </div>

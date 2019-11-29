@@ -672,6 +672,10 @@ pre tt:after {
 /*#formsection{
   background-image: linear-gradient(57deg, #007bff, #eff3f7);
 }*/
+
+#formsection h2 {
+  border-bottom: 3px solid #000;
+}
 .p-relative {
   position: relative;
 }

@@ -6,7 +6,6 @@ import "./swiper.css"
 
 class SwiperSample extends React.Component {
 	render() {
-		const { children, slidesperview } = this.props
 		const params = {
 			modules: [Pagination, Navigation],
 			slidesPerView: slidesperview,
@@ -44,8 +43,45 @@ class SwiperSample extends React.Component {
 		}
 		return (
 			<div id="homeswiper">
-				<Swiper {...params} className="text-center">
-					{children}
+				<Swiper {...params} className="text-center" slidesperview={1}>
+					<div
+						style={{
+							background: "url(https://source.unsplash.com/1366x480/?dark)",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							height: "480px",
+							width: "100%",
+						}}
+					/>
+					<div
+						style={{
+							background:
+								"url(https://source.unsplash.com/1366x480/?darkshadow)",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							height: "480px",
+							width: "100%",
+						}}
+					/>
+					<div
+						style={{
+							background: "url(https://source.unsplash.com/1366x480/?darkroom)",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							height: "480px",
+							width: "100%",
+						}}
+					/>
+					<div
+						style={{
+							background:
+								"url(https://source.unsplash.com/1366x480/?darknight)",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							height: "480px",
+							width: "100%",
+						}}
+					/>
 				</Swiper>
 			</div>
 		)
