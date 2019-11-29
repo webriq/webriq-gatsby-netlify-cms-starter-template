@@ -41,11 +41,11 @@ class IndexPage extends React.Component {
                 width: "100%",
               }}
             />
-            <div id="services" className="text-center container">
+            <div id="services" className="text-center">
               <div className="container p-relative">
                 <div className="blog-wrap py-4">
                   <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4 col-4">
                       <Link to="/">
                         <div className="round">
                           <img
@@ -60,7 +60,7 @@ class IndexPage extends React.Component {
                         </h3>
                       </Link>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4 col-4">
                       <Link to="/">
                         <div className="round">
                           <img
@@ -75,7 +75,7 @@ class IndexPage extends React.Component {
                         </h3>
                       </Link>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-4 col-4">
                       <Link to="/">
                         <div className="round">
                           <img
@@ -116,7 +116,7 @@ class IndexPage extends React.Component {
               <h2 className="mb-4 font-weight-normal">Services</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
               <div className="row">
-                <div className="col-md-3 px-0">
+                <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
                   <div className="bg-wrap p-3">
                     <img
                       className="img-fluid p-3"
@@ -135,7 +135,7 @@ class IndexPage extends React.Component {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-3 px-0">
+                <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
                   <div className="bg-wrap2 p-3">
                     <img
                       className="img-fluid p-3"
@@ -154,7 +154,7 @@ class IndexPage extends React.Component {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-3 px-0">
+                <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
                   <div className="bg-wrap p-3">
                     <img
                       className="img-fluid p-3"
@@ -173,7 +173,7 @@ class IndexPage extends React.Component {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-3 px-0">
+                <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
                   <div className="bg-wrap2 p-3">
                     <img
                       className="img-fluid p-3"

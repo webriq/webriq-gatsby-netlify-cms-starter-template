@@ -683,7 +683,7 @@ pre tt:after {
 .heading-banner {
   position: absolute;
   z-index: 2;
-  width: 45%;
+  width: 60%;
   padding: 0px 40px;
   top: 80px;
   left: 100px;
@@ -747,6 +747,38 @@ footer span {
 footer a {
   color: #00245a;
 }
+
+@media (max-width: 991px) {
+  .postwrap h4 {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  .heading-banner {
+    padding: 0 !important;
+    width: 80%;
+    left: 50px;
+  }
+  #services h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .round img {
+    max-width: 75px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .round img {
+    max-width: 60px !important;
+  }
+  .postwrap img {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
