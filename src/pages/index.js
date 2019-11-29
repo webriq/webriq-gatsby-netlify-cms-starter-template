@@ -15,6 +15,8 @@ import fb from "../images/facebook.png"
 import twitter from "../images/twitter.png"
 import linkedin from "../images/linkedin.png"
 import insta from "../images/instagram.png"
+const slugify = require("slugify")
+
 class IndexPage extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -213,9 +215,15 @@ class IndexPage extends React.Component {
                         alt="banner"
                         style={{ maxWidth: "350px" }}
                       />
-                      <h4 className="d-inline px-3">
-                        {blog.node.frontmatter.title}
-                      </h4>
+
+                      <Link
+                        className="text-dark"
+                        to={slugify(blog.node.frontmatter.title).toLowerCase()}
+                      >
+                        <h4 className="d-inline px-3">
+                          {blog.node.frontmatter.title}
+                        </h4>
+                      </Link>
                       <p>{blog.node.frontmatter.excerpt}</p>
                     </div>
                   ))}
