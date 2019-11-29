@@ -132,7 +132,7 @@ class IndexPage extends React.Component {
               in rhoncus leo, eget posuere mauris.
             </p>
           </div>
-          <section id="servicescont" className="text-center py-3">
+          <section id="servicescont" className="text-center py-5">
             <div className="container">
               <h2 className="mb-4 font-weight-normal">Services</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
