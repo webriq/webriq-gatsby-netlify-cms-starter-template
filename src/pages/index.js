@@ -29,38 +29,45 @@ class IndexPage extends React.Component {
               </Link>
             </div>
             <MySwiper slidesperview={1}>
-              <div>
-                <LazyLoadImage
-                  effect="blur"
-                  className="img-fluid"
-                  src="https://source.unsplash.com/1366x480/?dark"
-                  alt=""
-                />
-              </div>
-              <div>
-                <LazyLoadImage
-                  effect="blur"
-                  className="img-fluid"
-                  src="https://source.unsplash.com/1366x480/?darkshadow"
-                  alt=""
-                />
-              </div>
-              <div>
-                <LazyLoadImage
-                  effect="blur"
-                  className="img-fluid"
-                  src="https://source.unsplash.com/1366x480/?darkroom"
-                  alt=""
-                />
-              </div>
-              <div>
-                <LazyLoadImage
-                  effect="blur"
-                  className="img-fluid"
-                  src="https://source.unsplash.com/1366x480/?night"
-                  alt=""
-                />
-              </div>
+              <div
+                style={{
+                  background: "url(https://source.unsplash.com/1366x480/?dark)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  height: "480px",
+                  width: "100%",
+                }}
+              />
+              <div
+                style={{
+                  background:
+                    "url(https://source.unsplash.com/1366x480/?darkshadow)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  height: "480px",
+                  width: "100%",
+                }}
+              />
+              <div
+                style={{
+                  background:
+                    "url(https://source.unsplash.com/1366x480/?darkroom)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  height: "480px",
+                  width: "100%",
+                }}
+              />
+              <div
+                style={{
+                  background:
+                    "url(https://source.unsplash.com/1366x480/?darknight)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  height: "480px",
+                  width: "100%",
+                }}
+              />
             </MySwiper>
             <div id="services" className="text-center container">
               <div className="container p-relative">
