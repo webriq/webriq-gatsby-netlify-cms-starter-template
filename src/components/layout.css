@@ -46,6 +46,7 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration: none !important;
 }
 abbr[title] {
   border-bottom: none;
@@ -61,8 +62,11 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1em;
   margin: 0.67em 0;
+}
+h2 {
+  font-weight: 600 !important;
 }
 mark {
   background-color: #ff0;
@@ -665,8 +669,79 @@ pre tt:after {
 }
 /* CUSTOM CSS */
 
+/*#formsection{
+  background-image: linear-gradient(57deg, #007bff, #eff3f7);
+}*/
+.p-relative {
+  position: relative;
+}
+
+.heading-banner {
+  position: absolute;
+  z-index: 2;
+  width: 45%;
+  padding: 0px 40px;
+  top: 80px;
+  left: 100px;
+  color: #fff;
+}
+.heading-banner a {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+#services .blog-wrap {
+  width: 100%;
+  background-image: linear-gradient(180deg, #007bff, #7bf9dc);
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -100px;
+  border-radius: 3px;
+}
+.round img {
+  padding: 10px;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+
+.bg-wrap {
+  background: #7bf9dc;
+}
+.bg-wrap2 {
+  background: #2d8cf3;
+}
+
+.postwrap:nth-child(odd) {
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+#blogcont {
+  background: url("../images/blurry.jpeg");
+  background-size: cover;
+}
+/*.postwrap:nth-child(even) {
+  float: right;
+}
+.postwrap:nth-child(even) h4 {
+  float: left;
+}*/
+
+footer {
+  background: #007bff;
+  padding: 20px 0;
+  color: #fff;
+}
 footer span {
   font-family: Montserrat Medium, sans-serif;
+}
+footer a {
+  color: #00245a;
 }
 @media only screen and (max-width: 480px) {
   html {

@@ -1,0 +1,25 @@
+#homeswiper .swiper-container {
+	text-align: center !important;
+	padding-bottom: 0 !important;
+}
+#homeswiper .swiper-pagination {
+	display: none;
+}
+
+#homeswiper .swiper-button-next {
+	background-image: url("../../images/chevron-sign-to-right.png");
+	width: 32px !important;
+	height: 32px !important;
+	background-size: cover;
+}
+
+#homeswiper .swiper-button-prev {
+	background-image: url("../../images/chevron-sign-to-right.png");
+	width: 32px !important;
+	height: 32px !important;
+	background-size: cover;
+	transform: rotate(180deg);
+}
+
+
+
