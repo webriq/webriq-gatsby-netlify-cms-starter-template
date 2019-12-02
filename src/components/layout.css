@@ -777,6 +777,13 @@ pre tt:after {
 .bg-wrap2 {
   background: #2d8cf3;
 }
+.bg-wrap2:hover {
+  background: #7bf9dc;
+}
+.bg-wrap2 a {
+  display: block;
+  padding: 25px;
+}
 
 .postwrap:nth-child(odd) {
   border-bottom: 2px solid #000;
@@ -809,6 +816,9 @@ footer a {
   .postwrap h4 {
     display: block !important;
   }
+  .heading-banner h1 {
+    font-size: 40px;
+  }
 }
 @media (max-width: 767px) {
   .heading-banner {
@@ -830,6 +840,9 @@ footer a {
   }
   #services .blog-wrap {
     position: initial !important;
+  }
+  .bg-banner {
+    height: 375px !important;
   }
 }
 
