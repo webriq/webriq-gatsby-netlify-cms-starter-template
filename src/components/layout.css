@@ -798,6 +798,11 @@ pre tt:after {
 #blogcont h2 {
   color: #000 !important;
 }
+.postwrap {
+  background: rgba(232, 194, 205, 0.5);
+  padding: 20px;
+  box-shadow: 0px 3px 3px 3px #000;
+}
 .postwrap:nth-child(odd) {
   border-bottom: 2px solid #000;
 }
@@ -805,6 +810,14 @@ pre tt:after {
 #blogcont {
   background: url("../images/blurry.jpeg");
   background-size: cover;
+  position: relative;
+}
+
+#blogcont::after {
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: auto;
 }
 /*.postwrap:nth-child(even) {
   float: right;
