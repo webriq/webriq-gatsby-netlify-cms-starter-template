@@ -459,6 +459,9 @@ class IndexPage extends React.Component {
                           <label htmlFor="full_name">Enter Your Name</label>
                         </div>
                       </div>
+                      <div className="col-12">
+                        <div className="webriq-recaptcha" />
+                      </div>
 
                       <div className="col-12">
                         <div className="form-group">
