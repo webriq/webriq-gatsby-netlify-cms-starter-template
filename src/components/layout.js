@@ -23,10 +23,12 @@ const Layout = ({ children }) => {
       <>
         <main>{children}</main>
         <footer style={{ textAlign: "center" }}>
-          <span>Webriq -> Gatsby + netlifyCMS Template</span> ©{" "}
-          {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="container-fluid">
+            <span>Webriq -> Gatsby + netlifyCMS Template</span> ©{" "}
+            {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </div>
         </footer>
       </>
     </>

@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
           <div className="p-relative">
             <div className="heading-banner">
               <h1 className="mb-4">Gatsby Netlify CMS Starter Template</h1>
-              <Link to="/" className="btn ">
+              <Link to="/" className="btn-overlap">
                 Let's Talk
               </Link>
             </div>
@@ -206,7 +206,7 @@ class IndexPage extends React.Component {
                 <div className="col-md-8">
                   {blogs.map(blog => (
                     <div
-                      className="postwrap"
+                      className="postwrap mb-4"
                       key={blog.node.frontmatter.excerpt}
                     >
                       <img
@@ -220,13 +220,16 @@ class IndexPage extends React.Component {
                         className="text-dark"
                         to={slugify(blog.node.frontmatter.title).toLowerCase()}
                       >
-                        <h4 className="d-inline px-3">
+                        <h4 className="d-block">
                           {blog.node.frontmatter.title}
                         </h4>
                       </Link>
                       <p>{blog.node.frontmatter.excerpt}</p>
                     </div>
                   ))}
+                  <Link to="/" className="btn-overlap">
+                    View All
+                  </Link>
                 </div>
               </div>
             </div>
@@ -271,16 +274,10 @@ class IndexPage extends React.Component {
                           <label htmlFor="full_name">Enter Your Name</label>
                         </div>
                       </div>
-                      <div className="col-12">
-                        <div className="webriq-recaptcha" />
-                      </div>
 
                       <div className="col-12">
                         <div className="form-group">
-                          <button
-                            className="btn btn-primary hvr-shadow"
-                            type="submit"
-                          >
+                          <button className="btn-overlap" type="submit">
                             Submit
                           </button>
                         </div>

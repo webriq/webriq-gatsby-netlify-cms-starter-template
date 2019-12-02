@@ -45,8 +45,13 @@ a {
 }
 a:active,
 a:hover {
+  color: #fff;
   outline-width: 0;
   text-decoration: none !important;
+}
+
+button:focus {
+  outline: none !important;
 }
 abbr[title] {
   border-bottom: none;
@@ -689,13 +694,59 @@ pre tt:after {
   left: 100px;
   color: #fff;
 }
-.heading-banner a {
-  background: #007bff;
-  color: #fff;
-  padding: 10px 30px;
-  font-size: 20px;
+.btn-overlap {
+  cursor: pointer;
+  position: relative;
+  padding: 15px 25px;
+  background: #7bf9dc;
+  color: #000;
+  transition: all 1s;
+  border-radius: 0 !important;
+}
+.btn-overlap:hover {
+  color: #000;
 }
 
+.btn-overlap::before {
+  content: "";
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.btn-overlap::before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.btn-overlap:hover::before,
+.btn-overlap:hover::after {
+  width: 105%;
+  height: 115% !important;
+}
+.btn-overlap::before,
+.btn-overlap::after {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transition: all 1s;
+}
+.btn-overlap::after {
+  content: "";
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.btn-overlap:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 #services .blog-wrap {
   width: 100%;
   background-image: linear-gradient(180deg, #007bff, #7bf9dc);
@@ -722,7 +773,6 @@ pre tt:after {
 
 .postwrap:nth-child(odd) {
   border-bottom: 2px solid #000;
-  margin-bottom: 20px;
 }
 
 #blogcont {
@@ -764,9 +814,15 @@ footer a {
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 575px) {
   .round img {
-    max-width: 75px !important;
+    max-width: 60px !important;
+  }
+  #services {
+    background-image: linear-gradient(180deg, #007bff, #7bf9dc);
+  }
+  #services .blog-wrap {
+    position: initial !important;
   }
 }
 
@@ -776,6 +832,9 @@ footer a {
   }
   .postwrap img {
     width: 100%;
+  }
+  #services h3 {
+    font-size: 16px !importante;
   }
 }
 
