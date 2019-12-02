@@ -694,12 +694,19 @@ pre tt:after {
   left: 100px;
   color: #fff;
 }
+.heading-banner h1 {
+  font-size: 60px;
+}
+.bg-wrap .btn-overlap {
+  background: #2c8cf3;
+}
 .btn-overlap {
   cursor: pointer;
   position: relative;
   padding: 15px 25px;
   background: #7bf9dc;
   color: #000;
+  top: 5px;
   transition: all 1s;
   border-radius: 0 !important;
 }

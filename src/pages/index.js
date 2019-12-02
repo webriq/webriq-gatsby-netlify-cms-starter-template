@@ -29,7 +29,9 @@ class IndexPage extends React.Component {
         <div>
           <div className="p-relative">
             <div className="heading-banner">
-              <h1 className="mb-4">Gatsby Netlify CMS Starter Template</h1>
+              <h1 className="mb-4 text-capitalize">
+                Website that grow your business.
+              </h1>
               <Link to="/" className="btn-overlap">
                 Let's Talk
               </Link>
@@ -119,7 +121,7 @@ class IndexPage extends React.Component {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
               <div className="row">
                 <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
-                  <div className="bg-wrap p-3">
+                  <div className="bg-wrap px-3 pt-3 pb-5">
                     <img
                       className="img-fluid p-3"
                       alt="support"
@@ -130,15 +132,15 @@ class IndexPage extends React.Component {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Maecenas rhoncus turpis augue, nec cursus sem dictum
                       fringilla. Maecenas et massa rutrum, lacinia ipsum nec,
-                      sollicitudin sapien. Integer et scelerisque justo. Nam
-                      venenatis, libero vel pretium elementum, nibh elit
-                      vulputate lorem, nec semper mi nisi ut erat. Duis iaculis
-                      risus sed arcu rutrum convallis.
+                      sollicitudin sapien. Integer et scelerisque justo.
                     </p>
+                    <Link to="/" className="btn-overlap">
+                      More
+                    </Link>
                   </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
-                  <div className="bg-wrap2 p-3">
+                  <div className="bg-wrap2 px-3 pt-3 pb-5">
                     <img
                       className="img-fluid p-3"
                       alt="support"
@@ -149,15 +151,15 @@ class IndexPage extends React.Component {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Maecenas rhoncus turpis augue, nec cursus sem dictum
                       fringilla. Maecenas et massa rutrum, lacinia ipsum nec,
-                      sollicitudin sapien. Integer et scelerisque justo. Nam
-                      venenatis, libero vel pretium elementum, nibh elit
-                      vulputate lorem, nec semper mi nisi ut erat. Duis iaculis
-                      risus sed arcu rutrum convallis.
+                      sollicitudin sapien. Integer et scelerisque justo.
                     </p>
+                    <Link to="/" className="btn-overlap">
+                      More
+                    </Link>
                   </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
-                  <div className="bg-wrap p-3">
+                  <div className="bg-wrap px-3 pt-3 pb-5">
                     <img
                       className="img-fluid p-3"
                       alt="support"
@@ -168,15 +170,15 @@ class IndexPage extends React.Component {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Maecenas rhoncus turpis augue, nec cursus sem dictum
                       fringilla. Maecenas et massa rutrum, lacinia ipsum nec,
-                      sollicitudin sapien. Integer et scelerisque justo. Nam
-                      venenatis, libero vel pretium elementum, nibh elit
-                      vulputate lorem, nec semper mi nisi ut erat. Duis iaculis
-                      risus sed arcu rutrum convallis.
+                      sollicitudin sapien. Integer et scelerisque justo.
                     </p>
+                    <Link to="/" className="btn-overlap">
+                      More
+                    </Link>
                   </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-sm-2 px-0">
-                  <div className="bg-wrap2 p-3">
+                  <div className="bg-wrap2 px-3 pt-3 pb-5">
                     <img
                       className="img-fluid p-3"
                       alt="support"
@@ -187,11 +189,11 @@ class IndexPage extends React.Component {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Maecenas rhoncus turpis augue, nec cursus sem dictum
                       fringilla. Maecenas et massa rutrum, lacinia ipsum nec,
-                      sollicitudin sapien. Integer et scelerisque justo. Nam
-                      venenatis, libero vel pretium elementum, nibh elit
-                      vulputate lorem, nec semper mi nisi ut erat. Duis iaculis
-                      risus sed arcu rutrum convallis.
+                      sollicitudin sapien. Integer et scelerisque justo.
                     </p>
+                    <Link to="/" className="btn-overlap">
+                      More
+                    </Link>
                   </div>
                 </div>
               </div>
