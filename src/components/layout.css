@@ -777,6 +777,12 @@ pre tt:after {
 .bg-wrap2 {
   background: #2d8cf3;
 }
+.bg-wrap2 svg {
+  fill: #fff;
+}
+.bg-wrap2:hover svg {
+  fill: #000;
+}
 .bg-wrap2:hover {
   background: #7bf9dc;
 }
@@ -784,7 +790,14 @@ pre tt:after {
   display: block;
   padding: 25px;
 }
-
+#servicescont .row {
+  height: 100%;
+}
+#blogcont a,
+#blogcont p,
+#blogcont h2 {
+  color: #000 !important;
+}
 .postwrap:nth-child(odd) {
   border-bottom: 2px solid #000;
 }
