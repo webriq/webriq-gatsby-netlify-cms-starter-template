@@ -6,6 +6,20 @@ public_folder: assets
 logo_url: https://res.cloudinary.com/dnla85pdq/image/upload/v1569561258/webriq/webriq-cms-logo.png
 publish_mode: editorial_workflow
 collections:
+  - name: page
+    label: Pages
+    folder: src/markdown/pages
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+      - { name: metaTitle, label: Meta Title }
+      - { name: metaKeywords, label: Meta Keywords }
+      - { name: metaDescription, label: Meta Description, widget: text }
+      - { name: logo, label: Logo, widget: image }
+      - { name: banner, label: Banner, widget: image }
+      - { name: description, label: Description, widget: text }
+      - { name: status, label: Status }
   - name: blog
     label: Blog
     folder: src/markdown/posts

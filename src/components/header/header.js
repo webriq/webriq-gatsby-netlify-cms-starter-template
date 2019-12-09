@@ -11,16 +11,20 @@ const Header = () => (
       stickyClassName={styl.isSticky}
       stickyStyle={{ transform: "unset", zIndex: "2" }}
     >
-      <div className={`bg-primary ${styl.menuContainer}`}>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-6">
-              <Link className="text-white" to="/">
-                LOGO
-              </Link>
+      <div className="header">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col">
+              <div class="header-logo">
+                <Link to="/">
+                  <span class="display-4 text-white">LOGO</span>
+                </Link>
+              </div>
             </div>
-            <div className="col-6">
-              <SideBarMenu />
+            <div class="col-4">
+              <div class="text-right">
+                <SideBarMenu />
+              </div>
             </div>
           </div>
         </div>
