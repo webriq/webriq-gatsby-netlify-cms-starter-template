@@ -18,7 +18,6 @@ description: >-
 author: John Doe
 category:
   - Category1
-  - Category2
 tag:
   - Tag1
   - Tag2
