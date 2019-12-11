@@ -13,6 +13,8 @@ import jigsaw from "../images/jigsaws.svg"
 import report from "../images/report.svg"
 import trophy from "../images/trophy.svg"
 
+const slugify = require("slugify")
+
 // import img1 from "https://source.unsplash.com/user/neotronimz/600x400"
 class IndexPage extends React.Component {
   render() {
@@ -203,7 +205,9 @@ class IndexPage extends React.Component {
               {posts.map(post => (
                 <div class="col-md-6 col-lg-4 mb-4" key={post.node.id}>
                   <div class="blog-item bg-white h-100">
-                    <Link to="/post">
+                    <Link
+                      to={slugify(post.node.frontmatter.title).toLowerCase()}
+                    >
                       <div
                         class="blog-image"
                         style={{
@@ -214,7 +218,9 @@ class IndexPage extends React.Component {
                       />
                     </Link>
                     <div class="blog-text">
-                      <Link to="/post">
+                      <Link
+                        to={slugify(post.node.frontmatter.title).toLowerCase()}
+                      >
                         <h4>{post.node.frontmatter.title}</h4>
                       </Link>
                       <p class="pt-2 text-muted">

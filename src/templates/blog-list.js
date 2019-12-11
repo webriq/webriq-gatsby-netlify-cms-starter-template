@@ -21,11 +21,14 @@ const Blogs = ({ data }) => (
 			<Container>
 				<div class="row justify-content-between">
 					<div class="col-md-7">
+						{console.log(data)}
 						{data.allMarkdownRemark.edges.map(blog => (
 							<div class="blog-item bg-light" key={blog.node.id}>
 								<div class="row">
 									<div class="col-lg-4 pr-lg-0">
-										<Link to={slugify(blog.node.frontmatter.title)}>
+										<Link
+											to={slugify(blog.node.frontmatter.title).toLowerCase()}
+										>
 											<div
 												class="blog-image h-100"
 												style={{
@@ -38,14 +41,20 @@ const Blogs = ({ data }) => (
 									</div>
 									<div class="col-lg-8 pl-lg-0">
 										<div class="blog-text">
-											<Link to={slugify(blog.node.frontmatter.title)}>
-												<h4>The Benefits of a Headless CMS</h4>
+											<Link
+												to={slugify(blog.node.frontmatter.title).toLowerCase()}
+											>
+												<h4>{blog.node.frontmatter.title}</h4>
 											</Link>
 											<div class="text-muted small">
 												<i class="fa fa-folder pr-1" />
-												<span>
-													<Link to="/">Technology &amp; CMS</Link>
-												</span>
+												{blog.node.frontmatter.category.length > 0 ? (
+													<span>
+														<Link to="/">
+															{blog.node.frontmatter.category[0]}
+														</Link>
+													</span>
+												) : null}
 											</div>
 											<p class="pt-2 text-muted">
 												{blog.node.frontmatter.excerpt}
@@ -64,31 +73,13 @@ const Blogs = ({ data }) => (
 						<div class="side-content">
 							<h6 class="text-uppercase text-muted">Categories</h6>
 							<ul class="list-unstyled">
-								<li>
-									<Link class="text-body font-weight-bold" to="/">
-										News &amp; Announcements
-									</Link>
-								</li>
-								<li>
-									<Link class="text-body font-weight-bold" to="/">
-										Technology &amp; CMS
-									</Link>
-								</li>
-								<li>
-									<Link class="text-body font-weight-bold" to="/">
-										SEO
-									</Link>
-								</li>
-								<li>
-									<Link class="text-body font-weight-bold" to="/">
-										Content Marketing
-									</Link>
-								</li>
-								<li>
-									<Link class="text-body font-weight-bold" to="/">
-										Marketing Automation
-									</Link>
-								</li>
+								{data.allMarkdownRemark.group.map(cat => (
+									<li key={cat.fieldValue}>
+										<Link class="text-body font-weight-bold" to="/">
+											{cat.fieldValue}
+										</Link>
+									</li>
+								))}
 							</ul>
 						</div>
 						<div class="side-content">
@@ -136,9 +127,13 @@ export const blogQuery = graphql`
 						description
 						author
 						tag
+						category
 					}
 					html
 				}
+			}
+			group(field: frontmatter___category) {
+				fieldValue
 			}
 		}
 	}

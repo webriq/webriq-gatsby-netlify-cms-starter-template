@@ -20,13 +20,13 @@ const footer = props => {
 							<h6 class="text-uppercase text-white-50">Company</h6>
 							<ul class="list-unstyled small">
 								<li>
-									<Link to="index.html">Home</Link>
+									<Link to="/">Home</Link>
 								</li>
 								<li>
-									<Link to="about-us.html">About Us</Link>
+									<Link to="/about-us">About Us</Link>
 								</li>
 								<li>
-									<Link to="blog.html">Blog</Link>
+									<Link to="/blog">Blog</Link>
 								</li>
 								<li />
 							</ul>
