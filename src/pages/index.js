@@ -18,7 +18,8 @@ class IndexPage extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
-
+    const posts = this.props.data.allMarkdownRemark.edges
+    console.log(posts)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={siteTitle} description={siteDescription} />
@@ -199,87 +200,34 @@ class IndexPage extends React.Component {
               <h2>Latest Posts</h2>
             </div>
             <div class="row justify-content-around py-5">
-              <div class="col-md-6 col-lg-4 mb-4">
-                <div class="blog-item bg-white h-100">
-                  <Link to="/post">
-                    <div
-                      class="blog-image"
-                      style={{
-                        backgroundImage:
-                          "url('https://source.unsplash.com/user/joshhild/500x500')",
-                      }}
-                    />
-                  </Link>
-                  <div class="blog-text">
+              {posts.map(post => (
+                <div class="col-md-6 col-lg-4 mb-4" key={post.node.id}>
+                  <div class="blog-item bg-white h-100">
                     <Link to="/post">
-                      <h4>The Benefits of a Headless CMS</h4>
+                      <div
+                        class="blog-image"
+                        style={{
+                          backgroundImage: `url(${
+                            post.node.frontmatter.banner
+                          })`,
+                        }}
+                      />
                     </Link>
-                    <p class="pt-2 text-muted">
-                      With a headless CMS, the CMS is responsible for publishing
-                      content and media only.
-                    </p>
-                    <span class="text-muted small">
-                      <i class="fa fa-calendar-o pr-1" />
-                      December 02, 2019
-                    </span>
+                    <div class="blog-text">
+                      <Link to="/post">
+                        <h4>{post.node.frontmatter.title}</h4>
+                      </Link>
+                      <p class="pt-2 text-muted">
+                        {post.node.frontmatter.excerpt}
+                      </p>
+                      <span class="text-muted small">
+                        <i class="fa fa-calendar-o pr-1" />
+                        {post.node.frontmatter.publishedDate}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-4">
-                <div class="blog-item bg-white h-100">
-                  <Link to="/post">
-                    <div
-                      class="blog-image"
-                      style={{
-                        backgroundImage:
-                          "url('https://source.unsplash.com/user/theluisrocha/500x500')",
-                      }}
-                    />
-                  </Link>
-                  <div class="blog-text">
-                    <Link to="/post">
-                      <h4>
-                        Static Websites with Headless WordPress via REST API
-                      </h4>
-                    </Link>
-                    <p class="pt-2 text-muted">
-                      Static websites are great but they still need some kind of
-                      content management system.
-                    </p>
-                    <span class="text-muted small">
-                      <i class="fa fa-calendar-o pr-1" />
-                      November 22, 2019
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-4">
-                <div class="blog-item bg-white h-100">
-                  <Link to="/post">
-                    <div
-                      class="blog-image"
-                      style={{
-                        backgroundImage:
-                          "url('https://source.unsplash.com/user/danielaraya/500x500')",
-                      }}
-                    />
-                  </Link>
-                  <div class="blog-text">
-                    <Link to="/post">
-                      <h4>WTF is the JAM Stack</h4>
-                    </Link>
-                    <p class="pt-2 text-muted">
-                      In short, JAMStack is a web development architecture
-                      that’s about developing websites using tools that are
-                      loosely coupled.
-                    </p>
-                    <span class="date text-muted small">
-                      <i class="fa fa-calendar-o pr-1" />
-                      November 13, 2019
-                    </span>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
             <div class="text-center">
               <Link class="btn btn-primary" role="button" to="/blog">
@@ -330,7 +278,11 @@ class IndexPage extends React.Component {
               </div>
               <div class="col-md-6">
                 <div class="py-4">
-                  <form>
+                  <SampleForm
+                    form_name="Newsletter Form"
+                    form_id="5bcd42f86b63453b251972bc"
+                    form_classname="form-newsletter"
+                  >
                     <div class="form-row">
                       <div class="col-lg-6">
                         <div class="form-group">
@@ -362,7 +314,7 @@ class IndexPage extends React.Component {
                         Send Message
                       </button>
                     </div>
-                  </form>
+                  </SampleForm>
                 </div>
               </div>
             </div>
@@ -382,6 +334,19 @@ export const indexPageQuery = graphql`
         title
         author
         description
+      }
+    }
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            banner
+            publishedDate(formatString: "MMMM DD, YYYY")
+            excerpt
+          }
+        }
       }
     }
   }

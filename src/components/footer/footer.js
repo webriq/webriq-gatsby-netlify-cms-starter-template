@@ -20,13 +20,13 @@ const footer = props => {
 							<h6 class="text-uppercase text-white-50">Company</h6>
 							<ul class="list-unstyled small">
 								<li>
-									<a href="index.html">Home</a>
+									<Link to="index.html">Home</Link>
 								</li>
 								<li>
-									<a href="about-us.html">About Us</a>
+									<Link to="about-us.html">About Us</Link>
 								</li>
 								<li>
-									<a href="blog.html">Blog</a>
+									<Link to="blog.html">Blog</Link>
 								</li>
 								<li />
 							</ul>
@@ -35,28 +35,44 @@ const footer = props => {
 							<h6 class="text-uppercase text-white-50">Services</h6>
 							<ul class="list-unstyled small">
 								<li>
-									<a href="#">Web Design</a>
+									<Link to="/">Web Design</Link>
 								</li>
 								<li>
-									<a href="#">Content Creation</a>
+									<Link to="/">Content Creation</Link>
 								</li>
 								<li>
-									<a href="#">Development</a>
+									<Link to="/">Development</Link>
 								</li>
 							</ul>
 						</div>
 						<div class="col-md-2 text-center mb-3 mb-md-0">
 							<div class="social-icons">
-								<a href="#">
+								<a
+									href="https://www.facebook.com/"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
 									<i class="fa fa-facebook" />
 								</a>
-								<a href="#">
+								<a
+									href="https://twitter.com/"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
 									<i class="fa fa-twitter" />
 								</a>
-								<a href="#">
+								<a
+									href="http://instagram.com/"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
 									<i class="fa fa-instagram" />
 								</a>
-								<a href="#">
+								<a
+									href="https://www.linkedin.com/"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
 									<i class="fa fa-linkedin" />
 								</a>
 							</div>
@@ -68,7 +84,11 @@ const footer = props => {
 				<div class="container">
 					<span>
 						© 2019 All rights reserved. Designed and powered by
-						<a href="https://webriq.com/" target="_blank">
+						<a
+							href="https://webriq.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							WebriQ
 						</a>
 						.
